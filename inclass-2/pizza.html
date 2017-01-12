@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head><title>Pizza order site</title></head>
+<body>
+<p>Pizza order form</p>
+<br><img src="pizzaImg.png" style="width:228px;height:228px;">
+<form method="GET" action="#" id="orderForm">
+	<br>Name
+	<br>
+	<input type="text" name="name" required="true" placeholder="your name">
+	<br>Address
+	<br>
+	<input type="text" name="address" required="true" placeholder="your address like #### Street Name">
+	<br>Phone number: e.g. 1231231234
+	<br><input type="tel" name="tel" required="true" pattern="\d\d\d\d\d\d\d\d\d\d">
+	<br>Pizza size
+	<br>
+	<input type="radio" name="size" value="Large">Large
+	<input type="radio" name="size" value="Medium">Medium
+	<input type="radio" name="size" value="Small">Small
+	<br>Pizza topping
+	<br>
+	<input type="checkbox" name="topping" value="Sausage">Sausage
+	<input type="checkbox" name="topping" value="Pepperoni">Pepperoni
+	<input type="checkbox" name="topping" value="Olives">Olives
+	<input type="checkbox" name="topping" value="Anchoview">Anchoview
+	<input type="checkbox" name="topping" value="Onions">Onions
+	<br>
+	<input type="submit" name="Place Order" onclick="return checkSize(this.parent)">
+	<input type="reset" name="Clear">
+</form>
+<script type="text/javascript">
+function checkSize(form){
+	if(!form){
+		form=document.getElementById('orderForm');
+	}
+	var v_size = form.size;
+	checked = false;
+	for(i=0;i<v_size.length;i++){
+		if(v_size[i].checked){
+			checked=true;
+			break;
+		}
+	}
+	if(!checked){
+		alert("Please choose size");
+		return false;
+	} 
+}
+</script>
+</body>
+</html>
