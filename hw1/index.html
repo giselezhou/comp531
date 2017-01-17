@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Ji Zhou">
+    <title>Registration</title>
+</head>
+<body>
+<form method="GET" action="formProcessor.html" id="infoForm">
+    <br>Account Name
+    <br><input type="text"  required pattern="[a-zA-Z][a-zA-Z0-9]+$" name="account_name" title="Account name can only be upper or lower case letters and numbers, but may not start with a number">
+    <br>Display Name
+    <br><input type="text" name="display_name">
+    <br>Email Address
+    <br><input type="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[A-Za-z]+$" name="email">
+    <br>Phone Number
+    <br><input type="text" required placeholder="e.g. 1234567890" pattern="\d\d\d\d\d\d\d\d\d\d" name="phone_num" title="phone number should be 10 digits">
+    <br>Date of Birth
+    <br><input type="date" required name="birthday">
+    <br>Zipcode
+    <br><input type="text" required placeholder="e.g. 77005" pattern="\d\d\d\d\d" name="zipcode" title="Zipcode should be 5 digits">
+    <br>Password
+    <br><input type="password" required name="psw">
+    <br>Password confirmation
+    <br><input type="password" required name="psw_confirm">
+    <input hidden type="datetime" name="timestamp">
+    <br><input type="submit" name="submit" onclick="return validation(this.parent)"> <input type="reset" name="clear">
+
+</form>
+<script type="text/javascript">
+ function validation(form) {
+     if(!form){
+         form=document.getElementById('infoForm');
+     }
+     var d = new Date();
+     var milli = d.getTime();
+
+     var birthday = new Date(form.birthday.value);
+     var dist_year = d.getYear()-birthday.getYear();
+
+     var under_18 = 0;
+     if(dist_year<18){
+         under_18 = 1;
+     }else if(dist_year == 18){
+         if(d.getMonth()<birthday.getMonth()){
+            under_18 = 1;
+         }else if(d.getMonth()==birthday.getMonth()){
+             if(d.getDay()<birthday.getDay()){
+                 under_18 = 1;
+             }
+         }
+     }
+     if(under_18 == 1){
+         alert("Only individuals 18 years of age or older on the day of registration are allowed to register");
+         return false;
+     }
+     var psw = form.psw;
+     psw_confirm = form.psw_confirm;
+     if( psw.value != psw_confirm.value){
+         alert("Password not match!");
+         return false;
+     }else{
+         var timestamp = form.timestamp;
+
+         timestamp.value = milli;
+         console.log(timestamp.value);
+        return true;
+     }
+ }
+
+</script>
+</body>
+</html>

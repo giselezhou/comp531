@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Ji Zhou">
+    <title>Processor</title>
+</head>
+<body onload="decode()">
+
+<table id="table">
+
+</table>
+<script type="text/javascript">
+
+    function decode()
+    {
+
+        var queryString = window.location.search;
+        var uri = queryString.substring(1,location.search.length).split("&");
+        var content = "<tr><td>Key</td><td>Value</td></tr>";
+        var table = document.getElementById('table');
+
+        for (i = 0; i < uri.length; i++)
+        {
+            var s = uri[i].split("=");
+            if (s.length != 2) continue;
+            if( s[0] == "timestamp")
+            {
+                var d = new Date();
+                d.setTime(s[1]);
+                content += "<tr><td>" + s[0] + "</td><td>" + d.toLocaleString() + "</td></tr>";
+            }
+            else if(s[0]=="submit"| s[0]=="reset") ;
+            else
+            {
+                content += "<tr><td>" + s[0] + "</td><td>" + decodeURIComponent(s[1].replace(/\+/g, " ")) + "</td></tr>";
+            }
+
+        }
+
+        table.innerHTML = content;
+    }
+</script>
+
+</body>
+</html>
