@@ -20,20 +20,25 @@
         var content = "<tr><td>Key</td><td>Value</td></tr>";
         var table = document.getElementById('table');
 
+        var result={};
+
         for (i = 0; i < uri.length; i++)
         {
             var s = uri[i].split("=");
             if (s.length != 2) continue;
             if( s[0] == "timestamp")
             {
+
                 var d = new Date();
                 d.setTime(s[1]);
                 content += "<tr><td>" + s[0] + "</td><td>" + d.toLocaleString() + "</td></tr>";
+                result[s[0]] = d.toDateString();
             }
             else if(s[0]=="submit"| s[0]=="reset") ;
             else
             {
                 content += "<tr><td>" + s[0] + "</td><td>" + decodeURIComponent(s[1].replace(/\+/g, " ")) + "</td></tr>";
+                result[s[0]]=decodeURIComponent(s[1].replace(/\+/g, " "));
             }
 
         }
