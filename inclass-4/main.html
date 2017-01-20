@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<!-- saved from url=(0051)https://www.clear.rice.edu/comp431/sample/main.html -->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style id="stndz-style"></style>
+
+    <title>Rice Book</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script>
+        window.onload = function () {
+            var LOGIN = "Login"
+            var LOGOUT = "LogOut"
+
+            var username = document.getElementById("username")
+            var loginBtn = document.getElementById("login")
+
+            loginBtn.value = LOGIN
+
+            loginBtn.onclick = function () {
+                if (loginBtn.value == LOGIN) {
+                    login()
+                } else {
+                    logout()
+                }
+            }
+
+            function login() {
+                if (!username.value) {
+                    window.alert("Please enter a username")
+                } else {
+                    console.log('login was clicked')
+                    // hide the input field
+                    document.getElementById('username').style.display = 'none'
+                    // make the post div visible
+                    document.getElementById('share').style.display = ''
+                    // change the text of the login button to logout
+                    document.getElementById('username_nav').innerHTML = "Welcome "+ username.value + "!"
+                    loginBtn.value = LOGOUT
+                }
+            }
+
+            function logout() {
+                // reverse hiding done in login
+                document.getElementById('username').style.display=''
+                // change the text of button to login
+                loginBtn.value = LOGIN
+                document.getElementById('share').style.display = 'none'
+                document.getElementById('username_nav').innerHTML = ""
+                document.getElementById('username').value = ""
+                console.log('logout was clicked')
+            }
+
+        }
+    </script>
+
+</head>
+<body>
+<style type="text/css">
+
+    body {
+        margin: 6em;
+        background-color: lavenderblush;
+    }
+
+    div {
+        border: 0.5em solid lightpink;
+        padding: 1em;
+        border-radius: 2em;
+        margin-top: 1.5em;
+        text-align: left;
+    }
+
+    div span {
+        font-style: italic;
+        font-weight: bold;
+    }
+
+    input[type=button] {
+        cursor: pointer;
+        margin: 4px 2px;
+        background-color: lightpink;
+        font-weight: bold;
+    }
+
+    input {
+        font-size: 14px;
+        border-radius: 4px;
+        box-sizing: border-box;
+        padding: 8px 12px;
+        display: inline;
+        border: 1px solid #ccc;
+    }
+
+    nav input{
+        float: right;
+        margin-top: 5%;
+    }
+
+    nav input[type=button]{
+        margin-right: 10%;
+        margin-top: 5%;
+        margin-left: 2em;
+    }
+    div.post {
+        border: hidden;
+        font-size: 14px;
+        border-radius: 4px;
+        box-sizing: border-box;
+        padding: 8px 0px;
+
+    }
+    nav div{
+        background-color: lightpink;
+        position: fixed;
+        width: 100%;
+        top: -1em;
+        left: 0em;
+        border: hidden;
+        border-radius: 0% ;
+        padding: 10px;
+        margin-bottom: 10px;
+        margin-top: 0em;
+        display: inline;
+    }
+
+    nav h1{
+        float: left;
+        font-style: italic;
+        font-size: 60px;
+        margin-left: 2em;
+        color: white;
+
+    }
+
+    nav li {
+        height: 100%;
+        float: right;
+        display: inline-block;
+        list-style-type: none;
+        margin-top: 4%;
+        padding: 8px 12px;
+
+    }
+
+    .navoffset {
+        height: 2em;
+        border: hidden;
+
+    }
+
+
+</style>
+
+<nav>
+    <div>
+        <h1>Rice Book</h1>
+        <input type="button" value="Login" id="login">
+        <input class="input" type="text" placeholder="username" id="username">
+        <ul>
+            <li id="username_nav"></li>
+        </ul>
+    </div>
+</nav>
+<div class="navoffset">&nbsp;</div>
+
+<div class="post" style="display: none" id="share">
+    <input type="text" placeholder="share something" width="200">
+    <input type="button" value="Post">
+</div>
+
+<div>
+    <span>On January 1, Scott said:</span>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+    sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</div>
+
+<div>
+    <span>On December 2, Joe said:</span>
+    Aenean eget tortor et ipsum convallis convallis non sit amet massa. Donec nec vestibulum sem. Sed et est molestie,
+    congue magna vitae, aliquet lacus. Ut in scelerisque ante. Curabitur ultricies est id consectetur suscipit. In ut
+    lectus congue, dapibus lectus nec, hendrerit augue. Nullam dignissim pretium dictum. Fusce maximus condimentum orci
+    at aliquet. Donec dictum eget leo non vehicula. Morbi consectetur dictum eros in rutrum. Sed quis rhoncus risus.
+</div>
+
+<div>
+    <span>On November 3, Max said:</span>
+    Curabitur quis malesuada neque. Nulla quis mi congue, auctor ante id, cursus nunc. Vivamus dui nisl, pharetra quis
+    risus eu, mattis congue mi. In pellentesque hendrerit eros eget porta. Praesent ut metus suscipit, aliquam arcu a,
+    euismod mauris. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rhoncus, dui sed porttitor placerat,
+    felis mauris hendrerit tortor, non aliquet metus mi non ligula. Nunc velit purus, hendrerit ac pellentesque at,
+    scelerisque non justo. Fusce ligula ex, sagittis sit amet justo ac, scelerisque facilisis lectus. Ut in efficitur
+    turpis. Mauris scelerisque dapibus ligula, vel molestie risus viverra a. Donec in ultrices mauris. Nunc vestibulum
+    quam mauris, sed sollicitudin quam eleifend fermentum.
+</div>
+
+<div>
+    <span>On October 4, Eric said:</span>
+    Sed dictum malesuada ipsum, eget ornare enim molestie in. In id faucibus eros, at dapibus sem. Proin commodo nibh
+    est, at porta magna auctor eu. Nunc sed elementum mauris. Mauris sollicitudin, nisl at finibus iaculis, velit diam
+    ullamcorper arcu, quis luctus massa risus id turpis. Etiam vitae scelerisque risus. Nullam et facilisis nisi. Sed a
+    libero posuere, facilisis odio vitae, gravida tortor. Ut vitae nunc augue. Vestibulum ante ipsum primis in faucibus
+    orci luctus et ultrices posuere cubilia Curae; Sed non ante augue.
+</div>
+
+<div>
+    <span>On September 5, Scott said:</span>
+    Suspendisse sed vestibulum eros. Proin gravida quam id magna dictum, sed finibus arcu scelerisque. Phasellus varius
+    urna eu ultricies ultrices. Curabitur pulvinar sit amet nisl vel hendrerit. Sed vestibulum tortor et mollis
+    hendrerit. Integer tincidunt felis urna, sed faucibus lorem placerat facilisis. Cum sociis natoque penatibus et
+    magnis dis parturient montes, nascetur ridiculus mus. Sed placerat turpis quis ante imperdiet scelerisque. Nullam
+    aliquet vitae odio et eleifend.
+</div>
+
+<div>
+    <span>On August 6, Joe said:</span>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+    sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</div>
+
+<div>
+    <span>On July 7, Max said:</span>
+    Aenean eget tortor et ipsum convallis convallis non sit amet massa. Donec nec vestibulum sem. Sed et est molestie,
+    congue magna vitae, aliquet lacus. Ut in scelerisque ante. Curabitur ultricies est id consectetur suscipit. In ut
+    lectus congue, dapibus lectus nec, hendrerit augue. Nullam dignissim pretium dictum. Fusce maximus condimentum orci
+    at aliquet. Donec dictum eget leo non vehicula. Morbi consectetur dictum eros in rutrum. Sed quis rhoncus risus.
+</div>
+
+<div>
+    <span>On June 8, Eric said:</span>
+    Curabitur quis malesuada neque. Nulla quis mi congue, auctor ante id, cursus nunc. Vivamus dui nisl, pharetra quis
+    risus eu, mattis congue mi. In pellentesque hendrerit eros eget porta. Praesent ut metus suscipit, aliquam arcu a,
+    euismod mauris. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rhoncus, dui sed porttitor placerat,
+    felis mauris hendrerit tortor, non aliquet metus mi non ligula. Nunc velit purus, hendrerit ac pellentesque at,
+    scelerisque non justo. Fusce ligula ex, sagittis sit amet justo ac, scelerisque facilisis lectus. Ut in efficitur
+    turpis. Mauris scelerisque dapibus ligula, vel molestie risus viverra a. Donec in ultrices mauris. Nunc vestibulum
+    quam mauris, sed sollicitudin quam eleifend fermentum.
+</div>
+
+<div>
+    <span>On May 9, Scott said:</span>
+    Sed dictum malesuada ipsum, eget ornare enim molestie in. In id faucibus eros, at dapibus sem. Proin commodo nibh
+    est, at porta magna auctor eu. Nunc sed elementum mauris. Mauris sollicitudin, nisl at finibus iaculis, velit diam
+    ullamcorper arcu, quis luctus massa risus id turpis. Etiam vitae scelerisque risus. Nullam et facilisis nisi. Sed a
+    libero posuere, facilisis odio vitae, gravida tortor. Ut vitae nunc augue. Vestibulum ante ipsum primis in faucibus
+    orci luctus et ultrices posuere cubilia Curae; Sed non ante augue.
+</div>
+
+<div>
+    <span>On January 1, Scott said:</span>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+    sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</div>
+
+<div>
+    <span>On December 2, Joe said:</span>
+    Aenean eget tortor et ipsum convallis convallis non sit amet massa. Donec nec vestibulum sem. Sed et est molestie,
+    congue magna vitae, aliquet lacus. Ut in scelerisque ante. Curabitur ultricies est id consectetur suscipit. In ut
+    lectus congue, dapibus lectus nec, hendrerit augue. Nullam dignissim pretium dictum. Fusce maximus condimentum orci
+    at aliquet. Donec dictum eget leo non vehicula. Morbi consectetur dictum eros in rutrum. Sed quis rhoncus risus.
+</div>
+
+<div>
+    <span>On November 3, Max said:</span>
+    Curabitur quis malesuada neque. Nulla quis mi congue, auctor ante id, cursus nunc. Vivamus dui nisl, pharetra quis
+    risus eu, mattis congue mi. In pellentesque hendrerit eros eget porta. Praesent ut metus suscipit, aliquam arcu a,
+    euismod mauris. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rhoncus, dui sed porttitor placerat,
+    felis mauris hendrerit tortor, non aliquet metus mi non ligula. Nunc velit purus, hendrerit ac pellentesque at,
+    scelerisque non justo. Fusce ligula ex, sagittis sit amet justo ac, scelerisque facilisis lectus. Ut in efficitur
+    turpis. Mauris scelerisque dapibus ligula, vel molestie risus viverra a. Donec in ultrices mauris. Nunc vestibulum
+    quam mauris, sed sollicitudin quam eleifend fermentum.
+</div>
+
+<div>
+    <span>On October 4, Eric said:</span>
+    Sed dictum malesuada ipsum, eget ornare enim molestie in. In id faucibus eros, at dapibus sem. Proin commodo nibh
+    est, at porta magna auctor eu. Nunc sed elementum mauris. Mauris sollicitudin, nisl at finibus iaculis, velit diam
+    ullamcorper arcu, quis luctus massa risus id turpis. Etiam vitae scelerisque risus. Nullam et facilisis nisi. Sed a
+    libero posuere, facilisis odio vitae, gravida tortor. Ut vitae nunc augue. Vestibulum ante ipsum primis in faucibus
+    orci luctus et ultrices posuere cubilia Curae; Sed non ante augue.
+</div>
+
+<div>
+    <span>On September 5, Scott said:</span>
+    Suspendisse sed vestibulum eros. Proin gravida quam id magna dictum, sed finibus arcu scelerisque. Phasellus varius
+    urna eu ultricies ultrices. Curabitur pulvinar sit amet nisl vel hendrerit. Sed vestibulum tortor et mollis
+    hendrerit. Integer tincidunt felis urna, sed faucibus lorem placerat facilisis. Cum sociis natoque penatibus et
+    magnis dis parturient montes, nascetur ridiculus mus. Sed placerat turpis quis ante imperdiet scelerisque. Nullam
+    aliquet vitae odio et eleifend.
+</div>
+
+<div>
+    <span>On August 6, Joe said:</span>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+    sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</div>
+
+<div>
+    <span>On July 7, Max said:</span>
+    Aenean eget tortor et ipsum convallis convallis non sit amet massa. Donec nec vestibulum sem. Sed et est molestie,
+    congue magna vitae, aliquet lacus. Ut in scelerisque ante. Curabitur ultricies est id consectetur suscipit. In ut
+    lectus congue, dapibus lectus nec, hendrerit augue. Nullam dignissim pretium dictum. Fusce maximus condimentum orci
+    at aliquet. Donec dictum eget leo non vehicula. Morbi consectetur dictum eros in rutrum. Sed quis rhoncus risus.
+</div>
+
+<div>
+    <span>On June 8, Eric said:</span>
+    Curabitur quis malesuada neque. Nulla quis mi congue, auctor ante id, cursus nunc. Vivamus dui nisl, pharetra quis
+    risus eu, mattis congue mi. In pellentesque hendrerit eros eget porta. Praesent ut metus suscipit, aliquam arcu a,
+    euismod mauris. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rhoncus, dui sed porttitor placerat,
+    felis mauris hendrerit tortor, non aliquet metus mi non ligula. Nunc velit purus, hendrerit ac pellentesque at,
+    scelerisque non justo. Fusce ligula ex, sagittis sit amet justo ac, scelerisque facilisis lectus. Ut in efficitur
+    turpis. Mauris scelerisque dapibus ligula, vel molestie risus viverra a. Donec in ultrices mauris. Nunc vestibulum
+    quam mauris, sed sollicitudin quam eleifend fermentum.
+</div>
+
+<div>
+    <span>On May 9, Scott said:</span>
+    Sed dictum malesuada ipsum, eget ornare enim molestie in. In id faucibus eros, at dapibus sem. Proin commodo nibh
+    est, at porta magna auctor eu. Nunc sed elementum mauris. Mauris sollicitudin, nisl at finibus iaculis, velit diam
+    ullamcorper arcu, quis luctus massa risus id turpis. Etiam vitae scelerisque risus. Nullam et facilisis nisi. Sed a
+    libero posuere, facilisis odio vitae, gravida tortor. Ut vitae nunc augue. Vestibulum ante ipsum primis in faucibus
+    orci luctus et ultrices posuere cubilia Curae; Sed non ante augue.
+</div>
+
+
+</body>
+</html>
