@@ -1,0 +1,133 @@
+.feed{
+    margin: 5% 10%
+}
+
+.card-columns{
+    column-count: 2;
+    column-gap: 1rem;
+
+}
+.card{
+    margin-bottom: 1rem;
+    font-size: 24px;
+    font-family: 'Trebuchet MS', Helvetica, sans-serif;
+}
+.card-columns .card {
+    display: inline-block;
+    width: 100%;
+}
+.card-header{
+    border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0;
+    padding: .75rem 1rem;
+    margin-bottom: 0;
+    background-color: #1E90FF;
+    border-bottom: 1px solid rgba(0,0,0,.125);
+
+}
+
+.card-footer{
+
+    border-radius: 0 0 calc(.25rem - 1px) calc(.25rem - 1px);
+    padding: .75rem 1.25rem;
+    background-color: #F0F8FF;
+    border-top: 1px solid rgba(0,0,0,.125);
+    color: #1E90FF;
+    font-style: italic;
+
+}
+
+.card-btn{
+
+    cursor: pointer;
+
+}
+.card-author{
+
+    padding-top: 10px;
+    font-style: italic;
+    font-size: 30px;
+    font-weight: bold;
+    color: whitesmoke;
+
+
+}
+
+.card-text{
+
+
+    margin-bottom: 0px;
+}
+
+
+.pad_h{
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+.card-top{
+    margin-top: 28px;
+}
+.card-img{
+
+    width: 200px;
+    height: 200px;
+
+}
+
+.my-link{
+    margin-left: 10%;
+    margin-top: 5%;
+    font-family: 'Trebuchet MS', Helvetica, sans-serif;
+}
+
+.profile-item{
+    height: 2em;
+}
+
+.profile-item-label{
+    display: inline-block;
+    width: 13rem;
+
+}
+.profile-item-input{
+    display: inline-block;
+    width: 25%;
+}
+.profile-item-default{
+    display: inline-block;
+    width: 20%;
+    color: darkgray;
+}
+.profile-item-input input{
+    width: 95%;
+    border-radius: calc(.25rem - 1px);
+    font-size: 24px;
+}
+.profile-button button{
+    font-size: 24px;
+    background-color: #F0F8FF;
+
+}
+.hidden{
+    display: none;
+}
+
+.aquaBorder{
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: calc(.25rem - 1px);
+}
+.profile{
+    padding: 3% 5%;
+    font-size: 24px;
+    font-family: 'Trebuchet MS', Helvetica, sans-serif;
+}
+
+.alert{
+    color: red;
+    font-weight: bold;
+    width: 20%;
+    font-size: 16px;
+
+}
+
+

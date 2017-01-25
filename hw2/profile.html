@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Ji Zhou, jz65, S01255993">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Profile Page</title>
+    <script src="./profile.js"></script>
+</head>
+<body>
+<div class="my-link">
+    <a href="./main.html">Main Page</a>
+</div>
+<div class="profile feed aquaBorder">
+    <div class="profile-item" name="display_name">
+        <div class="profile-item-label" >Display Name </div>
+        <div class="profile-item-input"><input type="text"></div>
+        <div class="profile-item-default"> Donald </div>
+        <div class="profile-item-default alert"></div>
+    </div>
+    <div class="profile-item" name="email">
+        <div class="profile-item-label">Email Address</div>
+        <div class="profile-item-input"><input type="text"></div>
+        <div class="profile-item-default"> 123@rice.edu </div>
+        <div class="profile-item-default alert"></div>
+    </div>
+    <div class="profile-item" name="phone">
+        <div class="profile-item-label">Phone Number</div>
+        <div class="profile-item-input"><input type="text"></div>
+        <div class="profile-item-default"> 1231231234 </div>
+        <div class="profile-item-default alert"></div>
+    </div>
+    <div class="profile-item" name="zipcode">
+        <div class="profile-item-label">Zip Code</div>
+        <div class="profile-item-input"><input type="text"></div>
+        <div class="profile-item-default"> 77005 </div>
+        <div class="profile-item-default alert"></div>
+    </div>
+    <div class="profile-item" name="password">
+        <div class="profile-item-label">Password</div>
+        <div class="profile-item-input"><input type="password" id="password"></div>
+        <div class="profile-item-default hidden" > 123 </div>
+        <div class="profile-item-default alert"></div>
+
+    </div>
+    <div class="profile-item" name="password_confirm">
+        <div class="profile-item-label">Password Confirmation: </div>
+        <div class="profile-item-input"><input type="password" id="password_confirm"></div>
+        <div class="profile-item-default hidden" > 123 </div>
+        <div class="profile-item-default alert"></div>
+    </div>
+
+    <div class="profile-item">
+        <div class="profile-button profile-item-label">
+            <button type="submit" class="aquaBorder card-btn">Update Profile</button>
+        </div>
+        <div class="hint profile-item-input hidden"></div>
+    </div>
+</div>
+
+
+</body>
+</html>
