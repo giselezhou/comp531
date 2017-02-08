@@ -1,0 +1,28 @@
+.canvas-div{
+    padding: 15px;
+    height:100px;
+    width: 100px;
+}
+.box{
+    column-count: 4;
+    height: 540px;
+    width: 750px;
+}
+
+button{
+    font-size: 24px;
+    background-color: #F0F8FF;
+    margin-right: 15px;
+    margin-top: 10px;
+
+
+
+}
+p div{
+
+    font-family: 'Trebuchet MS', Helvetica, sans-serif;
+}
+.out_div{
+    margin-left: 10%;
+    margin-right: 10%;
+}
