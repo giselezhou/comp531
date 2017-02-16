@@ -23,8 +23,8 @@ class ToDoItem extends React.Component {
 
     render() { return (
         <li>
-            <i className="check glyphicon glyphicon-check" onClick={()=>this.setState(this.props.complete)}></i>
-            <span className={this.state.done ? "completed":""}>{this.props.text}</span>
+            <i className="check glyphicon glyphicon-check" onClick={()=>this.setState({done:!this.state.done})}></i>
+            <span contentEditable = "true" className={this.state.done ? "completed":""}>{this.props.text}</span>
             <i className="destroy glyphicon glyphicon-remove" onClick={this.props.remove} />
         </li>
         /*
@@ -75,7 +75,7 @@ class ToDos extends React.Component {
             </span>
             <ul className="todo">
                 {this.state.todoItems.map((x)=>{
-                    return <ToDoItem key={x.id} text={x.text} remove={() => this.removeTodo(x.id)} complete={()=>this.state.done}/>
+                    return <ToDoItem key={x.id} text={x.text} remove={() => this.removeTodo(x.id)}/>
                 })}
             </ul>
         </div>
