@@ -75,7 +75,7 @@ class ToDos extends React.Component {
             </span>
             <ul className="todo">
                 {this.state.todoItems.map((x)=>{
-                    return <ToDoItem key={x.id} text={x.text} remove={() => this.removeTodo(x.id)}/>
+                    return <ToDoItem key={x.id} text={x.text} remove={() => this.removeTodo(x.id)} complete={()=>this.state.done}/>
                 })}
             </ul>
         </div>
