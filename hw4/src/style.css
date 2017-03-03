@@ -1,0 +1,18 @@
+body {
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+}
+.row{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+textarea{
+    border-radius: 0.5em;
+}
+
+a{
+    cursor: pointer;
+}

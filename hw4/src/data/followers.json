@@ -1,0 +1,8 @@
+{
+  "followingItems": [
+    {"id": 0, "status": "This is a following", "username":"Following1", "avatar": "https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/10299744_415961128615127_1756724653_n.jpg?ig_cache_key=MTA2ODkxODc3Mjc3OTk2ODk3OA%3D%3D.2" },
+    {"id": 1, "status": "This is a following", "username":"Following2", "avatar": "https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/10299744_415961128615127_1756724653_n.jpg?ig_cache_key=MTA2ODkxODc3Mjc3OTk2ODk3OA%3D%3D.2" },
+    {"id": 2, "status": "This is a following", "username":"Following3", "avatar": "https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/10299744_415961128615127_1756724653_n.jpg?ig_cache_key=MTA2ODkxODc3Mjc3OTk2ODk3OA%3D%3D.2" }
+
+  ]
+}
