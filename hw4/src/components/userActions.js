@@ -37,7 +37,7 @@ const checkAge = (birthday)=>{
 // check*  objects are used to check if the param matches the required pattern
 // check*.errorMsg is the msg used to tell users what is wrong
 const checkUsername ={
-    check : (username) =>{return (/^[a-zA-Z][a-zA-Z0-9]+$/).test(username)},
+    check : (username) =>{return (/^[a-zA-Z][a-zA-Z0-9]*$/).test(username)},
     errorMsg : 'Name should be starting with a letter and only contains letters and digits!'
 }
 const checkZipcode = {
