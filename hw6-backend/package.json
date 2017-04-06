@@ -9,6 +9,7 @@
     "start": "node index.js",
     "watch": "nodemon index.js",
     "test": "mocha --opts mocha.opts src/**/*.spec.js",
+    "test:xunit": "npm run test -- --reporter xunit > results.xml",
     "test:watch": "npm run test -- -w",
     "build": "webpack -d",
     "deploy": "webpack -p && surge -p dist",

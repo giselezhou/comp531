@@ -1,0 +1,8 @@
+
+> gisele-hw6-backend@1.0.0 test /Users/zhouji/Graduate/2017s/531/workspace_531/hw6/backend
+> mocha --opts mocha.opts src/**/*.spec.js "--reporter" "xunit"
+
+<testsuite name="Mocha Tests" tests="2" failures="0" errors="0" skipped="0" timestamp="Thu, 06 Apr 2017 00:36:20 GMT" time="0.038">
+<testcase classname="Validate Article functionality" name="should add a new article successfully" time="0.01"/>
+<testcase classname="Validate Headline functionality" name="should update headline successfully" time="0.003"/>
+</testsuite>
