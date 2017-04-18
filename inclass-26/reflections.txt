@@ -1,0 +1,12 @@
+• what did you hope to learn but did not?
+PHP
+• What did you really enjoy learning about?
+Functional programming
+• What worked well in the course? and how?
+The progress of frontend and backend works parallel. And homeworks are based on inclass exercises.
+• What did not work well in the course and how might it be improved?
+Too many assignments and the workload is not proportional to the grade weight.
+• What could I have done to help you more, presentation of material, design of in class exercises, goals of projects – and be specific please!
+At first, I don't exactly how to do functional programming and have little experience. I would like it if you could give more instructions or templates for students. As a student, my code maybe ugly. It will be helpful if the instructor gives more guides.
+• Anything else you like to say?
+Have a good time at Rice.
