@@ -76,6 +76,8 @@ const updateArticle = (req, res) => {
                     function(err, article){
                     res.status(200).send({articles: article})
                 })
+            }else{
+                res.status(401).send("You are not the author")
             }
 
         }else if (req.body.commentId == -1){

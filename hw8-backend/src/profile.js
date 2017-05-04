@@ -82,7 +82,7 @@ const putZip = (req,res) => {
         Profile.update({username: username}, { $set: {email: zipcode}}, {new: true}, function(err, profile){
             if(err) throw err
             else {
-                res.status(200).send({username: username, zipcode: profile.zipcode})
+                res.status(200).send({username: username, zipcode: profile[0].zipcode})
             }
         })
     }
