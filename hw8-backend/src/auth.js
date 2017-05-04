@@ -15,9 +15,8 @@ const passport = require('passport')
 const FacebookStrategy = require('passport-facebook').Strategy
 const clientSecret = "4510c3c5da1ea6c102751af7121c8c6b"
 const clientID = "455940541405965"
-const backend = "https://gisele-backend.herokuapp.com"
-const callbackURL = backend + '/auth/callback'
-//const callbackURL = 'http://gisele-backend.herokuapp.com//auth/callback'
+
+const callbackURL = 'https://gisele-backend.herokuapp.com/auth/callback'
 const config = {clientSecret, clientID, callbackURL}
 let front_url = ''
 passport.serializeUser(function(user, done){

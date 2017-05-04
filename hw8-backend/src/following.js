@@ -2,7 +2,9 @@ const Profile = require('./model.js').Profile
 
 const fetchFollowing = (req, res) => {
     let username = req.params.user? req.params.user : req.username
-
+    if(!username) {
+        res.status(401).send("Please login")
+    }
     Profile.find({username: username}).exec(function(err, profile){
         if(err) throw err
         if(profile !== null && profile.length !== 0){

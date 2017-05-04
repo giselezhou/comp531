@@ -79,10 +79,10 @@ const putZip = (req,res) => {
     if(!zipcode){
         res.status(400).send({error:"Put email error: missing parameter 'zipcode'"})
     }else{
-        Profile.update({username: username}, { $set: {email: zipcode}}, {new: true}, function(err, profile){
+        Profile.update({username: username}, { $set: {zipcode: zipcode}}, {new: true}, function(err, profile){
             if(err) throw err
             else {
-                res.status(200).send({username: username, zipcode: profile[0].zipcode})
+                res.status(200).send({username: username, zipcode: zipcode})
             }
         })
     }
