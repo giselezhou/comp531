@@ -1,4 +1,4 @@
-
+//this is a typical react component which has a state change resolution
 import React, {Component, PropTypes} from 'react'
 import { connect } from 'react-redux'
 import {login, fbLogin} from './authActions'
